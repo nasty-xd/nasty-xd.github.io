@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Chat VAO
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid" style="background-color: #2B1150; min-height: 100vh; display: flex; flex-direction: column;">
+    <div class="row" style="flex-grow: 1;">
+    <div class="col-1 p-3" style="background-color: #2B1150;">
+    </div>
+
+    <div class="col-12 col-md-2 p-3" style="background-color: #8673AB;">
+        <p class="fs-5"  style="color: antiquewhite;">Это чат VAO, ему можно задать вопросы по темам, связанным с программированием.</p>
+        <div class="container">
+            <div class="cloud-container">
+                <p>Бот: Привет! Я чат-бот VAO. Я больше похож на блокнот, в котором можно хранить нужную информацию. Я пока еще новая программа, но все же, с чем то я могу справиться. Не суди строго &#128516;.</p>
+            </div>
+        </div>        
+        <img src="{{ url_for('static', filename='images/kapi.jpg') }}" class="img-fluid" alt="Капибара за компьютером">
+    </div>
+
+    <div class="col-8 p-3" style="background-color: #9F9F9F;">
+        {% if message %}
+            <p style="color: #2B1150;"><strong>{{ message }}</strong></p>
+        {% endif %}
+
+        {% if step == 1 %}
+            <p style="color: antiquewhite;"><strong>Добро пожаловать в чат VAO!</strong></p>
+            <p style="color: antiquewhite;">Выберите действие (введите номер):</p>
+            <ol style="color: antiquewhite;">
+                <li>Задать вопрос</li>
+                <li>Добавить новый вопрос или ответ</li>
+                <li>Изменить вопрос</li>
+                <li>Изменить ответ</li>
+                <li>Изменить категорию вопроса</li>
+            </ol>
+            <form method="POST">
+                <input type="text" class="form-control" name="user_input" placeholder="Введите номер действия" required>
+                <p></p>
+                <button type="submit" class="btn" style="background-color: #8673AB; color: white;">Отправить</button>
+            </form>
+
+        {% elif step == 2 %}
+            <p style="color: antiquewhite;">Выберите категорию:</p>
+            <form method="POST">
+                <select name="category_choice" required>
+                    {% for category in categories %}
+                        <option value="{{ category }}" class="btn" style="background-color: #8673AB; color: white;">{{ category }}</option>
+                    {% endfor %}
+                </select>
+                <button type="submit" class="btn" style="background-color: #8673AB; color: white;">Выбрать категорию</button>
+            </form>
+
+        {% elif step == 3 %}
+            <p style="color: antiquewhite;">Выберите вопрос из категории:</p>
+            <form method="POST">
+                <select name="question_choice" required>
+                    {% for question in questions %}
+                        <option value="{{ question }}" class="btn" style="background-color: #8673AB; color: white;">{{ question }}</option>
+                    {% endfor %}
+                </select>
+                <button type="submit" class="btn" style="background-color: #8673AB; color: white;">Отправить</button>
+            </form>
+
+        {% elif step == 4 %}
+            <p style="color: antiquewhite;">Выберите вопрос для изменения:</p>
+            <form method="POST">
+                <select name="question_choice" required>
+                    {% for question in questions %}
+                        <option value="{{ question }}" class="btn" style="background-color: #8673AB; color: white;">{{ question }}</option>
+                    {% endfor %}
+                </select>
+                <input type="text" class="form-control" name="new_question" placeholder="Введите новый текст вопроса" required>
+                <p></p>
+                <button type="submit" class="btn" style="background-color: #8673AB; color: white;">Изменить вопрос</button>
+            </form>
+
+        {% elif step == 5 %}
+            <p style="color: antiquewhite;">Выберите вопрос, чтобы изменить ответ:</p>
+            <form method="POST">
+                <select name="question_choice" required>
+                    {% for question in questions %}
+                        <option value="{{ question }}" class="btn" style="background-color: #8673AB; color: white;">{{ question }}</option>
+                    {% endfor %}
+                </select>
+                <input type="text" class="form-control" name="new_answer" placeholder="Введите новый ответ" required>
+                <p></p>
+                <button type="submit" class="btn" style="background-color: #8673AB; color: white;">Изменить ответ</button>
+            </form>
+
+        {% elif step == 6 %}
+            <p style="color: antiquewhite;">Выберите вопрос для изменения категории:</p>
+            <form method="POST">
+                <select name="question_choice" required>
+                    {% for question in questions %}
+                        <option value="{{ question }}" class="btn" style="background-color: #8673AB; color: white;">{{ question }}</option>
+                    {% endfor %}
+                </select>
+                <input type="text" class="form-control" name="new_category" placeholder="Введите новую категорию" required>
+                <p></p>
+                <button type="submit" class="btn" style="background-color: #8673AB; color: white;">Изменить категорию</button>
+            </form>
+
+        {% elif step == 7 %}
+            <p style="color: antiquewhite;">Введите новый вопрос и ответ:</p>
+            <form method="POST">
+                <input type="text" class="form-control" name="new_question" placeholder="Новый вопрос" required>
+                <p></p>
+                <input type="text" class="form-control" name="new_answer" placeholder="Ответ" required>
+                <p></p>
+                <button type="submit" class="btn" style="background-color: #8673AB; color: white;">Добавить</button>
+            </form>
+
+        {% endif %}
+
+        <!-- Кнопка назад -->
+        {% if step > 1 %}
+            <form method="POST" style="margin-top: 20px;">
+                <button type="submit" name="back_button"  class="btn" style="background-color: #8673AB; color: white;">Назад</button>
+            </form>
+        {% endif %}
+    </div>
+    </div>
+</div>
+{% endblock %}
+
+
