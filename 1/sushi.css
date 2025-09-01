@@ -1,0 +1,597 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/background.jpg') center/cover;
+    filter: blur(10px);
+    animation: blurEffect 3s infinite alternate ease-in-out;
+    z-index: -1;
+}
+
+
+.all {
+    background-image: url('images/image3.png');
+    width: 1200px;
+
+}
+
+
+
+
+.overlay {
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 40px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+
+.logo {
+    width: 1200px;
+    margin-top: 20px;
+    z-index: 1;
+    margin-top: -30px;
+}
+
+.line {
+    filter: blur(6px);
+    width: 100%;
+    margin-top: -15px;
+    width: 1200px;
+}
+
+
+.linetext {
+    position: relative;
+    width: 100%;
+    width: 1200px;
+    z-index: 1;
+}
+
+
+.text-container {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between; 
+    width: 100%;
+    padding: 0 20px;/
+
+}
+
+
+.word1 a {
+    font-size: 40px;
+    margin-left: 50px;
+    margin-right: 20px;
+    background: linear-gradient(to right, #E5D9F2, #A888B5, #AF12E5);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: Madimi One;
+    text-decoration: underline;
+    text-decoration-color: #6A1E55;
+}
+
+
+
+
+
+.word a {
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    background: linear-gradient(to right, #E5D9F2, #A888B5, #AF12E5);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 40px;
+    font-family: Madimi One;
+}
+
+
+@keyframes blurEffect {
+    0% { filter: blur(10px); }
+    100% { filter: blur(3px); }
+}
+
+.food {
+    float: left;
+}
+
+
+
+  .image-container {
+    width: 530px;
+    height: 430px;
+    background: url('Images/cat.png') center/cover;
+    transition: background 0.2s ease-in-out;
+    float: left;
+  }
+  
+  .image-container:hover {
+    background: url('Images/catomnom.png') center/cover;
+    float: left;
+  }
+
+
+
+.new {
+    float: left;
+    font-size: 30px;
+    margin-left: 500px;
+    position: relative;
+    z-index: 2;
+    color: #CDC1FF;
+    text-align: center;
+    font-family: Madimi One;
+    text-shadow:
+        2px 2px 0 #3B3030,
+        -2px 2px 0 #3B3030,
+        2px -2px 0 #3B3030,
+        -2px -2px 0 #3B3030;
+
+}
+
+
+
+.new h2 {
+    font-size: 30px;
+
+}
+
+.info {
+    font-family: 'Knewave', sans-serif;
+    font-size: 25px;
+
+    margin-left: 650px;
+    margin-top: 100px;
+    margin-right: 30px;
+
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 5px solid rgba(255, 255, 255, 1);
+    border-radius: 15px;
+    color: #CDC1FF;
+
+
+}
+
+
+.susha {
+    margin-left: -200px;
+    z-index: -1;
+
+}
+
+
+.container {
+    height: 300px;
+    clear: both;
+}
+
+
+
+.allmenu {
+    background-image: url('images/image2.png');
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.nigirilogo {
+    float: left;
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: Madimi One;
+    background: linear-gradient(to bottom, #E50046, #BE3144, #E195AB);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+
+
+
+
+.linetext2 {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    z-index: 1;/
+}
+
+
+.text-container2 {
+    position: relative;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+
+    width: 100%;
+    padding: 0 20px;
+    font-size: 30px;
+}
+
+
+
+
+.text-wrapper {
+    display: flex;
+    
+
+    gap: 20px;
+}
+
+
+        .containernigiri {
+            position: relative;
+            width: 300px; 
+            overflow: hidden;
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-bottom: 50px;
+            float: left;
+        }
+
+        .image12 {
+            width: 100%;
+            display: block;
+        }
+
+
+
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+
+button {
+    width: 150px;
+    height: 25px;
+    font-weight: bold;
+    background-color: #C599B6;
+}
+
+
+        .textnigiri1 {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: bottom 0.4s ease-in-out;
+        }
+
+        .image-wrapper:hover .textnigiri1 {
+            bottom: 0;
+        }
+
+.containernigiri2 {
+            position: relative;
+            width: 300px;
+            overflow: hidden;
+            margin-left: 50px;
+            margin-bottom: 50px;
+            float: left;
+            margin-right: 50px;
+        }
+
+.containernigiri2:hover .textnigiri1 {
+            bottom: 0; 
+        }
+
+
+
+
+.containernigiri3 {
+            position: relative;
+            width: 300px;
+            overflow: hidden;
+            margin-left: 50px;
+            margin-bottom: 50px;
+            float: left;
+        }
+
+.containernigiri3:hover .textnigiri1 {
+            bottom: 0;/
+        }
+
+
+
+.containernigiri4 {
+            position: relative;
+            width: 300px; 
+            overflow: hidden;
+            margin-left: 50px;
+            margin-bottom: 50px;
+            float: left;
+        }
+
+.containernigiri4:hover .textnigiri1 {
+            bottom: 0;
+        }
+
+
+
+
+.containernigiri5 {
+            position: relative;
+            width: 300px;
+            overflow: hidden;
+            margin-left: 50px;
+            margin-bottom: 50px;
+            float: left;
+        }
+
+.containernigiri5:hover .textnigiri1 {
+            bottom: 0; 
+        }
+
+
+
+.containernigiri6 {
+            position: relative;
+            width: 300px; 
+            overflow: hidden;
+            margin-left: 50px;
+            margin-bottom: 50px;
+            float: left;
+        }
+
+.containernigiri6:hover .textnigiri1 {
+            bottom: 0; 
+        }
+
+
+
+.containernigiri7 {
+            position: relative;
+            width: 300px; 
+            overflow: hidden;
+            margin-left: 50px;
+            margin-bottom: 50px;
+        }
+
+.containernigiri7:hover .textnigiri1 {
+            bottom: 0; 
+        }
+
+
+.vertical-text2 {
+    writing-mode: vertical-rl; 
+    text-orientation: upright; 
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    margin-left: -20px;
+    font-family: Madimi One;
+    background: linear-gradient(to bottom, #E50046, #BE3144, #E195AB);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+
+.vertical-text3 {
+    writing-mode: vertical-rl; 
+    text-orientation: upright;
+    font-size: 27px;
+    font-weight: bold;
+    margin-left: -30px;
+    font-family: Madimi One;
+    background: linear-gradient(to bottom, #E50046, #BE3144, #E195AB);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.vertical-text4 {
+    writing-mode: vertical-rl; 
+    text-orientation: upright; 
+    font-size: 27px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    margin-top: 10px;
+    margin-left: -10px;
+    font-family: Madimi One;
+    background: linear-gradient(to bottom, #E50046, #BE3144, #E195AB);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+
+
+
+
+.vertical-text5 {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-left: -10px;
+    margin-bottom: 60px;
+    font-family: Madimi One;
+    background: linear-gradient(to bottom, #E50046, #BE3144, #E195AB);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+.nigirimenu, .rollsmenu, .sashimimenu, .tempuramenu, .makimenu, .setmenu, .drinksmenu {
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+
+.aboutus {
+    background-image: url('images/aboutus.png');
+    max-width: 1200px;
+    text-align: left;
+    font-family: Madimi One;
+
+}
+
+
+.aboutustext {
+    margin: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 5px solid rgba(255, 255, 255, 1);
+    border-radius: 15px;
+    color: #C2D9FF;
+    padding: 20px;
+}
+
+
+
+
+
+.container13 {
+  display: flex;
+  align-items: flex-start; 
+}
+
+
+
+
+
+.nigiriinfo, .rollsinfo, .sashimiinfo, .tempurainfo, .makiinfo, .setsinfo, .drinksinfo {
+    font-family: Alatsi;
+    font-size: 20px;
+    background-color: #B5A8D5;
+    color: black;
+}
+
+
+
+
+
+.reviews {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-image: url('images/image3.png');
+}
+
+/* Стили для каждого отзыва */
+.review {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: #B5A8D5;
+}
+
+.review p {
+    margin: 5px 0;
+}
+
+
+.rating {
+    color: gold;
+}
+
+
+.reviews button {
+    background-color: #9ACBD0;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+
+button:hover {
+    background-color: #48A6A7;
+}
+
+
+
+
+.navigation {
+    position: fixed;
+    right: 10px; 
+    bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 9999;
+}
+
+.navigation a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #6a4c9c; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.navigation a:hover {
+    background-color: #4b79a1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

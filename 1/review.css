@@ -1,0 +1,59 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/background.jpg') center/cover;
+    filter: blur(10px);
+    animation: blurEffect 3s infinite alternate ease-in-out;
+    z-index: -1;
+}
+
+
+
+.back {
+    font-family: Alatsi;
+    font-size: 20px;
+    background-color: #9FB3DF;
+    color: black;
+    width: 300px;
+}
+
+
+
+.order textarea {
+    border: 3px solid #04364A;
+    border-radius: 10px;
+    font-size: 22px;
+    background-color: #9FB3DF;
+}
+
+
+.register {
+    text-align: center;
+    font-family: Madimi One;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 5px solid rgba(255, 255, 255, 1);
+    border-radius: 15px;
+    color: white;
+    padding: 20px;
+
+}
