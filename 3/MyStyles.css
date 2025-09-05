@@ -22,7 +22,7 @@ td.game-table-cell{
     border: 1px dotted #eee;
 }
 .snake-unit{
-    background-color: white;
+    background-color: rgb(117, 140, 201);
 }
 .food-unit{
     background-color: red;
