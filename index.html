@@ -1,35 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мое портфолио!</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Портфолио</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: url('img/pic.jpg') no-repeat center/cover;
+            color: #eee;
+            backdrop-filter: blur(4px);
+        }
+        header {
+            background: rgba(110, 70, 160, 0.8);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: 700;
+            animation: fadeIn 1.2s ease;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(40, 20, 60, 0.7);
+            border-radius: 12px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+            animation: slideUp 1.2s ease;
+        }
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #d8b4ff;
+        }
+        .my_projects a {
+            display: block;
+            padding: 12px 15px;
+            margin: 10px 0;
+            background: rgba(150, 100, 200, 0.3);
+            text-decoration: none;
+            color: #f0e6ff;
+            border-radius: 8px;
+            transition: transform 0.25s, background 0.25s;
+        }
+        .my_projects a:hover {
+            background: rgba(180, 120, 230, 0.45);
+            transform: translateX(6px);
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            padding: 20px;
+            color: #4c0e8e;
+            animation: fadeIn 1.8s ease;
+        }
+        footer a {
+            color: #260846;
+            text-decoration: none;
+            font-weight: 700;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
 </head>
 <body>
     <header>
-     	Мы не знаем как программировать, но умеем создавать видимость бурной деятельности   
-    </header> 
-    <div class="container">
-    	Мои работы
-    	<div class="my_projects">
-    		<a href="1/index.html">Сайт на чистом HTML/CSS</a>
-    		<br>
-    		<a href="3/zmeika.html">Snake</a>		
-		<br>
-    		<a href="drum/">jquery drum kit</a>
-		<br>
-			<a href="https://github.com/nasty-xd/tech-store-nodejs.git">Tech store</a>
-		<br>
-    		<a href="TS_2/">drawing</a>
-		</div>
-    </div> 
-    <footer>
-    	Возьмите нас на работу пожалуйста
-	mailto:<a href="#">Me@ee.ee</a>
+        Добро пожаловать в мое портфолио!
+    </header>
 
+    <div class="container">
+        <h2>Мои проекты</h2>
+        <div class="my_projects">
+            <a href="1/index.html">Сайт на чистом HTML/CSS</a>
+            <a href="3/zmeika.html">Snake</a>
+            <a href="drum/">jQuery Drum Kit</a>
+            <a href="https://github.com/nasty-xd/tech-store-nodejs.git" target="_blank">Tech Store (Node.js)</a>
+            <a href="TS_2/public/index.html">Drawing App</a>
+        </div>
+    </div>
+
+    <footer>
+        Если хотите связаться со мной: <a href="mailto:anastassija.klimenko@ivkhk.ee">anastassija.klimenko@ivkhk.ee</a>
     </footer>
 </body>
 </html>
