@@ -32,10 +32,7 @@ body::before {
 
 }
 
-.logo:hover {
-    background: url('Images/logo.png') center/cover;
-    float: left;
-  }
+
 
 
 .overlay {
