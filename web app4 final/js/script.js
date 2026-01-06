@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
     tabs('.tabheader__item', '.tabcontent', '.tabheader__items', 'tabheader__item_active');
     modal('[data-modal]', '.modal', modalTimerId);
-    timer('.timer', '2025-12-31');
+    timer('.timer', '2030-05-20');
     cards();
     calc();
     forms('form', modalTimerId);
@@ -26,4 +26,5 @@ window.addEventListener('DOMContentLoaded', function() {
         wrapper: '.offer__slider-wrapper',
         field: '.offer__slider-inner',
     });
+
 });
