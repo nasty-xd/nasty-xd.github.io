@@ -23,6 +23,19 @@
             box-shadow: 0 4px 14px rgba(0,0,0,0.3);
             animation: slideUp 1.2s ease;
         }
+
+
+        .container1 {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(40, 20, 60, 0.7);
+            border-radius: 12px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+            animation: slideUp 1.2s ease;
+        }
+
+
         h2 {
             font-size: 1.8rem;
             margin-bottom: 20px;
@@ -43,6 +56,25 @@
             background: rgba(180, 120, 230, 0.45);
             transform: translateX(6px);
         }
+
+
+.container1 a {
+            display: block;
+            padding: 12px 15px;
+            margin: 10px 0;
+            background: rgba(150, 100, 200, 0.3);
+            text-decoration: none;
+            color: #f0e6ff;
+            border-radius: 8px;
+            transition: transform 0.25s, background 0.25s;
+        }
+        .container1 a:hover {
+            background: rgba(180, 120, 230, 0.45);
+            transform: translateX(6px);
+        }
+
+
+
         footer {
             margin-top: 40px;
             font-size: 25 px;
