@@ -77,11 +77,12 @@
 
         footer {
             margin-top: 40px;
-            font-size: 25 px;
+            font-size: 35 px;
             text-align: center;
             padding: 20px;
             color: #4c0e8e;
             animation: fadeIn 1.8s ease;
+            background-color: white;
         }
         footer a {
             color: #260846;
