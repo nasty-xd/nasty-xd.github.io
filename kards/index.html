@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System vs. Application Software</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>System or Application Software?</h1>
+        <p>Click a card to learn, or start the test.</p>
+        
+        
+        <!-- Learning mode container -->
+        <div id="card-container" class="card-container"></div>
+        <button id="shuffle-btn" class="hidden">Перемешать</button>
+
+
+
+<h2>Изученные</h2>
+<div id="learned-cards" class="learned-container"></div>
+        
+        <button id="start-test-btn">Start Test</button>
+
+        <!-- Test mode container -->
+        <div id="test-area" class="hidden">
+            <h2>Drag the cards to the correct category</h2>
+            <div id="source-cards" class="card-container"></div>
+
+            <div class="drop-zones-container">
+                <div id="system-zone" class="drop-zone" data-type="System Software">
+                    <h3>System Software</h3>
+                </div>
+                <div id="app-zone" class="drop-zone" data-type="Application Software">
+                    <h3>Application Software</h3>
+                </div>
+            </div>
+
+            <button id="check-btn" class="hidden">Check Answers</button>
+            <div id="results"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
